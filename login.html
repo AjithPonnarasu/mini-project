@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="login.css">
+<title>JustMarried | Login</title>
+
+<script language="javascript" type="text/javascript">
+function read()
+{
+
+	var loginID=document.getElementById("loginID").value;
+	var loginPassword=document.getElementById("loginPass").value;
+
+	try{
+		var mail=localStorage.getItem("MailID");
+		var password=localStorage.getItem("Password");
+
+	
+		if(loginID==mail && loginPassword==password)
+		{
+			true;			
+		}
+		else
+		{
+			throw "invalid details";
+		}
+	}catch(err)
+	{
+		alert(err);
+		return false;
+	}
+
+}
+</script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md">
+        <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="main.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="register.html">Register</a>
+                </li>
+            </ul>
+        </div> 
+    </nav>
+
+<header class="head">
+<div class="overlay"></div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</header>
+            <form onsubmit="return read()" class="container1" action="profiles.html">
+                <h1>Login</h1>
+            
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" id="loginID" autocomplete="off" required>
+                <br>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" id="loginPass" required>
+                <br>
+                
+                <button type="submit" class="btn-outline-light">Login</button>
+              </form>
+
+</body>
+</html>

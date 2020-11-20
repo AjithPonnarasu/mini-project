@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="register.css">
+<title>Register | JustMarried</title>
+</head>
+
+<script language="javascript" type="text/javascript">
+function store()
+{
+	var fname=document.getElementById("firstName").value;
+	var lname=document.getElementById("lastName").value;
+	var pass=document.getElementById("password").value;
+	var cpass=document.getElementById("cpassword").value;
+	var pnumber=document.getElementById("phoneNumber").value;
+	var mail=document.getElementById("email").value;
+
+	
+	localStorage.setItem("FirstName",fname);
+	localStorage.setItem("LirstName",lname);
+	localStorage.setItem("Password",pass);
+	localStorage.setItem("ConPassword",cpass);
+	localStorage.setItem("PhoneNumber",pnumber);
+	localStorage.setItem("MailID",mail);	
+
+
+	alert("Registration Successful.Now go to Login Page");
+}
+</script>
+
+
+
+
+<body class="imgblur">
+    <nav class="navbar navbar-expand-md">
+        <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="main.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="register.html">Register</a>
+                </li>
+            </ul>
+        </div> 
+    </nav>
+ 
+
+   <div class="container">
+        <form class="form-horizontal" role="form" >
+            <h2 id="h1">Registration</h2>
+            <div class="form-group">
+                <label for="firstName" class="col-sm-3 control-label">First Name*</label>
+                <div class="col-sm-9">
+                    <input type="text" id="firstName" placeholder="First Name" class="form-control" autofocus autocomplete="off" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="lastName" class="col-sm-3 control-label">Last Name*</label>
+                <div class="col-sm-9">
+                    <input type="text" id="lastName" placeholder="Last Name" class="form-control" autofocus autocomplete="off" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-3">Gender*</label>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label class="radio-inline">
+                                <input type="radio" name="gender" id="femaleRadio" value="Female">Female
+                            </label>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="radio-inline">
+                                <input type="radio" name="gender" id="maleRadio" value="Male">Male
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="email" class="col-sm-3 control-label">Email</label>
+                <div class="col-sm-9">
+                    <input type="email" id="email" placeholder="Email" class="form-control" name="email" autocomplete="off"  required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password" class="col-sm-3 control-label">Password*</label>
+                <div class="col-sm-9">
+                    <input type="password" id="password" placeholder="Password" class="form-control"  required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password" class="col-sm-3 control-label">Confirm Password*</label>
+                <div class="col-sm-9">
+                    <input type="password" id="cpassword" placeholder="Password" class="form-control"  required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="birthDate" class="col-sm-3 control-label">Date of Birth*</label>
+                <div class="col-sm-9">
+                    <input type="date" id="birthDate" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber" class="col-sm-3 control-label">Phone number* </label>
+                <div class="col-sm-9">
+                    <input type="phoneNumber" id="phoneNumber" placeholder="Phone number" class="form-control" autocomplete="off"  required>
+                    <span class="help-block">Your phone number won't be disclosed anywhere </span>
+                </div>
+            </div>
+
+
+            <button type="submit" class="btn btn-outline-secondary btn-lg"  onclick="store()" >Register</button>
+        </form>
+    </div>
+
+    <footer class="page-footer">
+	<div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                    <h6 ><b>CONTACT</b></h6>
+                    <p>Yuvaraj M K
+                    <br/>yuvarajyuvi472@gmail.com
+                    <br/>+91 8526238276</p><br/>
+	    </div>	
+            <div class="col-lg-4 col-md-4 col-sm-12">
+		<br/>
+                    <p>Ponnarasu A
+                    <br/>ajithponnarasu999@gmail.com
+                    <br/>+91 9629975031</p>
+	    </div>
+	</div>
+	
+        <div style="text-align:center">Developed by yuvi and ponnarasu</div>
+    </footer>
+</body>
+</html>
